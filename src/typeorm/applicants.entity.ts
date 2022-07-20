@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Posts } from './posts.entity';
 
 @Entity()
@@ -29,7 +29,7 @@ export class Applicants {
   })
   phoneno: string;
 
-
+  
   @Column({
     type: 'int',
     name: 'jobId',
