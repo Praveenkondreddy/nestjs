@@ -53,16 +53,13 @@ export class Profile {
     default: '',
   })
   experience: string;
-
-  @Column({
-    nullable: false,
-    default: '',
-  })
-  description: string;
   
   @OneToOne(()=>User)
-  @JoinColumn({
-    name:"userId"
+  @Column({
+    type: 'bigint',
+    name: 'userId',
+    nullable:false,
+    default:0
   })
   userId: string;
 

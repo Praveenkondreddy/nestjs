@@ -14,7 +14,7 @@ export class ProfileService {
 
       async findOne(userId: string): Promise<any>{
         const users= await this.getProfile()
-         
+      
         return users.find(user =>user.userId===userId) 
     
       }
