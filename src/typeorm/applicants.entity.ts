@@ -29,7 +29,7 @@ export class Applicants {
   })
   phoneno: string;
 
-  @OneToOne(()=>Posts)
+
   @Column({
     type: 'int',
     name: 'jobId',
