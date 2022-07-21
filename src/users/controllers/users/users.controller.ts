@@ -28,8 +28,8 @@ export class UsersController {
   @UseGuards(AuthenticatedGuard)  
   @Get('/protected')
   getUsers(@Request() req,@Session() session: Record<string,any>) {
-  const users=this.userService.getUsers();
-    return users;
+    console.log(session)
+    return req.user;
   }
 
    

@@ -54,7 +54,7 @@ export class Profile {
   })
   experience: string;
   
-  @OneToOne(()=>User)
+ 
   @Column({
     type: 'bigint',
     name: 'userId',
@@ -62,6 +62,10 @@ export class Profile {
     default:0
   })
   userId: string;
+
+  @OneToOne(()=>User)
+  @JoinColumn()
+  user:User
 
 
 }
